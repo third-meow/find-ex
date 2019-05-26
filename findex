@@ -1,0 +1,7 @@
+#!/bin/bash
+
+IFS=':'
+read -ra ADDR <<< "$PATH"
+for i in "${ADDR[@]}"; do
+	find "$i" | grep "$1"
+done
